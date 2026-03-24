@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - AI Developer</title>
+  <meta name="description" content="AIを活用したWebアプリ・自動化ツールの開発ポートフォリオ">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'Noto Sans JP', 'sans-serif'] },
+          colors: {
+            brand: { 50:'#eff6ff', 100:'#dbeafe', 200:'#bfdbfe', 400:'#60a5fa', 500:'#3b82f6', 600:'#2563eb', 700:'#1d4ed8', 900:'#1e3a5f' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .gradient-text { background: linear-gradient(135deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+    .tech-tag { display: inline-block; padding: 2px 10px; border-radius: 9999px; font-size: 12px; font-weight: 500; background: #f1f5f9; color: #475569; margin: 2px; }
+  </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+    <div class="max-w-5xl mx-auto flex items-center justify-between px-4 py-3">
+      <span class="text-lg font-bold text-gray-900">Portfolio</span>
+      <nav class="hidden sm:flex items-center gap-6 text-sm text-gray-600">
+        <a href="#works" class="hover:text-brand-600">Works</a>
+        <a href="#skills" class="hover:text-brand-600">Skills</a>
+        <a href="#contact" class="hover:text-brand-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-50 via-white to-purple-50"></div>
+    <div class="relative max-w-5xl mx-auto px-4 py-24 md:py-32">
+      <p class="text-sm font-medium text-brand-600 mb-3">AI Developer / Full-Stack Engineer</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+        AIで<span class="gradient-text">ビジネスの課題</span>を<br>解決します
+      </h1>
+      <p class="text-lg text-gray-600 max-w-2xl mb-10 leading-relaxed">
+        ChatGPT・Claude等のAI APIを活用したWebアプリ、LINE Bot、業務自動化ツールの設計・開発を行っています。
+        企画から実装・デプロイまでワンストップで対応可能です。
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#works" class="bg-brand-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-brand-700 transition-colors">
+          制作実績を見る
+        </a>
+        <a href="#contact" class="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors">
+          お問い合わせ
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What I Do -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-12 text-center">できること</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-xl mb-4">&#x1F916;</div>
+          <h3 class="font-bold text-gray-900 mb-2">AIアプリ開発</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">ChatGPT / Claude APIを活用したWebアプリケーションの設計・開発。画像認識、文章生成、データ分析など。</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-xl mb-4">&#x1F4AC;</div>
+          <h3 class="font-bold text-gray-900 mb-2">LINE Bot / チャットボット</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">LINE公式アカウントの自動応答Bot、AIを使ったカスタマーサポートBot、予約受付Botの構築。</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center text-xl mb-4">&#x26A1;</div>
+          <h3 class="font-bold text-gray-900 mb-2">業務自動化ツール</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">データ収集・レポート自動生成・SNS投稿自動化など、繰り返し業務をツール化して効率化。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works -->
+  <section id="works" class="py-20">
+    <div class="max-w-5xl mx-auto px-4">
+      <p class="text-sm font-medium text-brand-600 mb-2 text-center">WORKS</p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-12 text-center">制作実績</h2>
+
+      <div class="space-y-16">
+
+        <!-- Project 1: COMPA -->
+        <div class="card-hover bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+          <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-48 flex items-center justify-center">
+            <div class="text-center text-white">
+              <div class="text-5xl mb-2">&#x1F4DA;</div>
+              <p class="text-2xl font-bold">COMPA</p>
+              <p class="text-sm opacity-80">共通テスト対策AI学習アプリ</p>
+            </div>
+          </div>
+          <div class="p-6 md:p-8">
+            <div class="flex flex-wrap items-center gap-2 mb-4">
+              <span class="bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-0.5 rounded-full">Webアプリ</span>
+              <span class="bg-green-100 text-green-700 text-xs font-medium px-2.5 py-0.5 rounded-full">AI活用</span>
+              <span class="bg-purple-100 text-purple-700 text-xs font-medium px-2.5 py-0.5 rounded-full">個人開発</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">共通テスト対策AI学習プラットフォーム</h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+              大学入学共通テスト（数学）に特化したAI学習Webアプリ。本番と同じ穴埋め形式で演習でき、
+              AIが弱点を分析して最適な学習プランを提案。164問の問題データベース、模擬テスト、
+              パフォーマンスダッシュボード、AI個別指導機能を搭載。
+            </p>
+            <div class="mb-4">
+              <p class="text-xs font-medium text-gray-500 mb-2">主な機能</p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>&#x2713; 共通テスト本番準拠の穴埋め形式演習（17単元・164問）</li>
+                <li>&#x2713; AI弱点分析＋学習プラン自動生成</li>
+                <li>&#x2713; AI演習（難易度選択可）＋ステップ解説</li>
+                <li>&#x2713; スコア推移・レーダーチャート付きダッシュボード</li>
+              </ul>
+            </div>
+            <div class="mb-4">
+              <p class="text-xs font-medium text-gray-500 mb-2">技術スタック</p>
+              <div>
+                <span class="tech-tag">Next.js 14</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Prisma</span>
+                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">Claude API</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">shadcn/ui</span>
+                <span class="tech-tag">Recharts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Salon Post AI -->
+        <div class="card-hover bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+          <div class="bg-gradient-to-r from-pink-400 to-rose-500 h-48 flex items-center justify-center">
+            <div class="text-center text-white">
+              <div class="text-5xl mb-2">&#x1F338;</div>
+              <p class="text-2xl font-bold">サロンPost AI</p>
+              <p class="text-sm opacity-80">SNS投稿自動生成ツール</p>
+            </div>
+          </div>
+          <div class="p-6 md:p-8">
+            <div class="flex flex-wrap items-center gap-2 mb-4">
+              <span class="bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-0.5 rounded-full">SaaS</span>
+              <span class="bg-green-100 text-green-700 text-xs font-medium px-2.5 py-0.5 rounded-full">AI Vision</span>
+              <span class="bg-purple-100 text-purple-700 text-xs font-medium px-2.5 py-0.5 rounded-full">個人開発</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">美容院・サロン向けSNS投稿自動生成AI</h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+              施術写真をアップロードするだけで、AIが写真を分析しInstagram投稿文＋ハッシュタグを
+              3パターン自動生成。美容院オーナーのSNS運用負担を大幅に削減するWebアプリ。
+              ドラッグ&ドロップ対応、ワンクリックコピー機能搭載。
+            </p>
+            <div class="mb-4">
+              <p class="text-xs font-medium text-gray-500 mb-2">主な機能</p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>&#x2713; AI画像認識による施術内容の自動分析</li>
+                <li>&#x2713; 3パターンの投稿文＋ハッシュタグ30個自動生成</li>
+                <li>&#x2713; ドラッグ&ドロップ画像アップロード</li>
+                <li>&#x2713; ワンクリックコピーでInstagramに即投稿</li>
+              </ul>
+            </div>
+            <div class="mb-4">
+              <p class="text-xs font-medium text-gray-500 mb-2">技術スタック</p>
+              <div>
+                <span class="tech-tag">Next.js 16</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Claude Vision API</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">Vercel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Job Hunter -->
+        <div class="card-hover bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+          <div class="bg-gradient-to-r from-emerald-500 to-teal-600 h-48 flex items-center justify-center">
+            <div class="text-center text-white">
+              <div class="text-5xl mb-2">&#x1F50D;</div>
+              <p class="text-2xl font-bold">Job Hunter</p>
+              <p class="text-sm opacity-80">案件自動スカウトツール</p>
+            </div>
+          </div>
+          <div class="p-6 md:p-8">
+            <div class="flex flex-wrap items-center gap-2 mb-4">
+              <span class="bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-0.5 rounded-full">自動化ツール</span>
+              <span class="bg-green-100 text-green-700 text-xs font-medium px-2.5 py-0.5 rounded-full">スクレイピング</span>
+              <span class="bg-purple-100 text-purple-700 text-xs font-medium px-2.5 py-0.5 rounded-full">個人開発</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">3プラットフォーム横断 案件自動収集・通知Bot</h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+              ココナラ・ランサーズ・クラウドワークスの3サイトから案件情報を自動収集し、
+              スキルマッチ度・予算・競合数をスコアリング。SaaS化ポテンシャルも評価し、
+              Discord/LINEで新着通知。GitHub Actionsで完全自動運用。
+            </p>
+            <div class="mb-4">
+              <p class="text-xs font-medium text-gray-500 mb-2">主な機能</p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>&#x2713; 3サイト横断スクレイピング（300件+/回）</li>
+                <li>&#x2713; キーワード・予算・競合数による自動スコアリング</li>
+                <li>&#x2713; SaaS化ポテンシャル評価</li>
+                <li>&#x2713; Discord/LINE自動通知 + GitHub Actions定期実行</li>
+              </ul>
+            </div>
+            <div class="mb-4">
+              <p class="text-xs font-medium text-gray-500 mb-2">技術スタック</p>
+              <div>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Cheerio</span>
+                <span class="tech-tag">GitHub Actions</span>
+                <span class="tech-tag">Discord Webhook</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-20 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <p class="text-sm font-medium text-brand-600 mb-2 text-center">SKILLS</p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-12 text-center">技術スタック</h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold text-gray-900 mb-4">Frontend</h3>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>React / Next.js</span><span class="text-gray-400">&#9608;&#9608;&#9608;&#9608;&#9608;</span></div>
+              <div class="h-2 bg-gray-100 rounded-full"><div class="h-2 bg-brand-500 rounded-full" style="width:90%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>TypeScript</span><span class="text-gray-400">&#9608;&#9608;&#9608;&#9608;&#9608;</span></div>
+              <div class="h-2 bg-gray-100 rounded-full"><div class="h-2 bg-brand-500 rounded-full" style="width:85%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>Tailwind CSS</span><span class="text-gray-400">&#9608;&#9608;&#9608;&#9608;&#9608;</span></div>
+              <div class="h-2 bg-gray-100 rounded-full"><div class="h-2 bg-brand-500 rounded-full" style="width:90%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold text-gray-900 mb-4">Backend / AI</h3>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>Node.js / Python</span><span class="text-gray-400">&#9608;&#9608;&#9608;&#9608;&#9608;</span></div>
+              <div class="h-2 bg-gray-100 rounded-full"><div class="h-2 bg-emerald-500 rounded-full" style="width:85%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>ChatGPT / Claude API</span><span class="text-gray-400">&#9608;&#9608;&#9608;&#9608;&#9608;</span></div>
+              <div class="h-2 bg-gray-100 rounded-full"><div class="h-2 bg-emerald-500 rounded-full" style="width:90%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>Prisma / SQLite / DB設計</span><span class="text-gray-400">&#9608;&#9608;&#9608;&#9608;&#9608;</span></div>
+              <div class="h-2 bg-gray-100 rounded-full"><div class="h-2 bg-emerald-500 rounded-full" style="width:80%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold text-gray-900 mb-4">Infrastructure</h3>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>Vercel / デプロイ</span><span class="text-gray-400">&#9608;&#9608;&#9608;&#9608;&#9608;</span></div>
+              <div class="h-2 bg-gray-100 rounded-full"><div class="h-2 bg-purple-500 rounded-full" style="width:85%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>GitHub / Git</span><span class="text-gray-400">&#9608;&#9608;&#9608;&#9608;&#9608;</span></div>
+              <div class="h-2 bg-gray-100 rounded-full"><div class="h-2 bg-purple-500 rounded-full" style="width:85%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>GitHub Actions / CI・CD</span><span class="text-gray-400">&#9608;&#9608;&#9608;&#9608;&#9608;</span></div>
+              <div class="h-2 bg-gray-100 rounded-full"><div class="h-2 bg-purple-500 rounded-full" style="width:75%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold text-gray-900 mb-4">Other</h3>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>Webスクレイピング</span><span class="text-gray-400">&#9608;&#9608;&#9608;&#9608;&#9608;</span></div>
+              <div class="h-2 bg-gray-100 rounded-full"><div class="h-2 bg-orange-500 rounded-full" style="width:85%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>LINE Bot / Discord Bot</span><span class="text-gray-400">&#9608;&#9608;&#9608;&#9608;&#9608;</span></div>
+              <div class="h-2 bg-gray-100 rounded-full"><div class="h-2 bg-orange-500 rounded-full" style="width:80%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>API設計・連携</span><span class="text-gray-400">&#9608;&#9608;&#9608;&#9608;&#9608;</span></div>
+              <div class="h-2 bg-gray-100 rounded-full"><div class="h-2 bg-orange-500 rounded-full" style="width:85%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strengths -->
+  <section class="py-20">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-12 text-center">選ばれる理由</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">&#x26A1;</div>
+          <h3 class="font-bold text-gray-900 mb-2">スピード納品</h3>
+          <p class="text-sm text-gray-600">最新のAI開発ツールを活用し、通常の3〜5倍のスピードで開発。シンプルなBotなら3〜5日で納品可能。</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">&#x1F4AC;</div>
+          <h3 class="font-bold text-gray-900 mb-2">丁寧なヒアリング</h3>
+          <p class="text-sm text-gray-600">「何を作りたいか」だけでなく「何を解決したいか」をお聞きし、最適な技術選定と設計をご提案します。</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">&#x1F527;</div>
+          <h3 class="font-bold text-gray-900 mb-2">企画から運用まで</h3>
+          <p class="text-sm text-gray-600">要件定義・設計・開発・デプロイ・運用保守まで一人で完結。コミュニケーションコストを最小限に。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-gradient-to-br from-brand-600 to-indigo-700">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">お気軽にご相談ください</h2>
+      <p class="text-blue-100 mb-10">
+        「こんなこと出来る？」「いくらくらいかかる？」<br>
+        まずはお気軽にメッセージください。初回相談は無料です。
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://coconala.com/" target="_blank" rel="noopener"
+          class="bg-white text-brand-700 px-8 py-3.5 rounded-lg font-medium hover:bg-blue-50 transition-colors inline-flex items-center justify-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          ココナラで相談する
+        </a>
+        <a href="https://github.com/" target="_blank" rel="noopener"
+          class="border border-white/30 text-white px-8 py-3.5 rounded-lg font-medium hover:bg-white/10 transition-colors inline-flex items-center justify-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          GitHubを見る
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center text-sm text-gray-400 border-t border-gray-100">
+    &copy; 2026 Portfolio. All rights reserved.
+  </footer>
+
+</body>
+</html>
